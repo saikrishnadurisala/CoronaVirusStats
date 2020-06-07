@@ -1,0 +1,99 @@
+<div class="container" [style.margin-top.px]="'50'">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Total Cases</h2>
+                </div>
+                <div class="card-body">
+                    <h4 class="text-center" [style.color]="'#bf542a'">{{stats.total_cases}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Deceased Cases</h2>
+                </div>
+                <div class="card-body">
+                    <h4 class="text-center" [style.color]="'red'">{{stats.death_cases}} ({{stats.general_death_rate}}%)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Global Statastics</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center m-2">Active Cases</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="text-center" [style.color]="'red'">{{stats.currently_infected}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center m-2">Critical Cases</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="text-center" [style.color]="'red'">{{stats.critical_condition_active_cases}} ({{stats.active_cases_critical_percentage}}%)</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center m-2">Mild Cases</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="text-center" [style.color]="'#bf542a'">{{stats.mild_condition_active_cases}} ({{stats.active_cases_mild_percentage}}%)</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center m-2">Cases with outcome</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="text-center" [style.color]="'#2037a8'">{{stats.cases_with_outcome}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center m-2">Recovered Cases</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="text-center" [style.color]="'green'">{{stats.recovered_closed_cases}} ({{stats.closed_cases_recovered_percentage}}%)</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center m-2">Deceased Cases</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="text-center" [style.color]="'red'">{{stats.death_closed_cases}} ({{stats.closed_cases_death_percentage}}%)</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
